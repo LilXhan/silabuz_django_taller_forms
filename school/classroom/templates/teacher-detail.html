@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-12">
+      <h2>Profesor</h2>
+      <ul class="list-group">
+        <li class="list-group">
+          <span class="badge bg-primary rounded-pill">Nombre</span>
+          {{ name }}
+        </li>
+        <li class="list-group">
+          <span class="badge bg-primary rounded-pill">Apellido</span>
+          {{ last_name }}
+        </li>
+        <li class="list-group">
+          <span class="badge bg-primary rounder-pill">Aula</span>
+          {{ classroom }}
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

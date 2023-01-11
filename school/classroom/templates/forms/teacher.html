@@ -1,0 +1,20 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+  <h2>Agregar Profesor</h2>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+
+  <script>
+    labels = document.querySelectorAll('label');
+    labels.forEach(label => {
+      label.classList.add('form-label');
+    });
+  </script>
+{% endblock %}

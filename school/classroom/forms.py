@@ -27,3 +27,20 @@ class StudentForm(forms.Form):
     #             'class': 'form-select'
     #         }),
     #     }
+
+
+class TeacherForm(forms.Form):
+
+    name = forms.CharField(max_length=200, label='Nombre', widget=forms.TextInput(attrs={
+        'class': 'form-control'
+    }))
+    last_name = forms.CharField(max_length=200, label='Apellidos', widget=forms.TextInput(attrs={
+        'class': 'form-control'
+    }))
+    idClassroom = forms.ModelChoiceField(queryset=Classroom.objects.all(), widget=forms.Select(attrs={
+        'class': 'form-select'
+    }), empty_label=None)
+
+
+
+
