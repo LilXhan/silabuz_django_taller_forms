@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h2>Alumnos</h2>
+
+<ul>
+  {% for student in students %}
+  <li>
+    {{student.name}} {{student.last_name}} - {{student.idClassroom}}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
